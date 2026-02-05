@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: <%= color %>;">
+    <header>
+        <h1>Langara Pizza</h1>
+        <p class="tagline">Online Order Form</p>
+    </header>
+
+    <form method="POST" action="/orders">
+        <!-- TODO: pizza order form -->
+        <fieldset>
+            <legend>Sauce</legend>
+            <label><input type="radio" name="sauce" value="tomato" checked> tomato</label>
+            <label><input type="radio" name="sauce" value="alfredo"> alfredo</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Toppings</legend>
+            <label><input type="checkbox" name="toppings" value="pepperoni"> pepperoni</label>
+            <label><input type="checkbox" name="toppings" value="mushrooms"> mushrooms</label>
+            <label><input type="checkbox" name="toppings" value="onions"> onions</label>
+        </fieldset>
+
+        <label>
+            Your Name:
+            <input type="text" name="name">
+        </label>
+
+        <label>
+            Your Email:
+            <input type="text" name="email">
+        </label>
+
+        <button>Submit</button>
+    </form>
+
+    <form action="/" method="GET" id="color-form">
+        <label>
+            Change background color:
+            <input type="color" name="color">
+        </label>
+        <button>Submit</button>
+    </form>
+</body>
+
+</html>

@@ -37,5 +37,12 @@ export const validatePizza = (req, res, next) => {
 };
 
 export const validateColor = (req, res, next) => {
+  let color = req.query.color;
+
+  if (!color || !validator.isHexColor(color.replace("#", ""))) {
+    color = "#fffeed";
+  }
+
+  res.locals.color = color;
   next();
 };
