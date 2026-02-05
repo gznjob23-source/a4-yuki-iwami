@@ -10,3 +10,6 @@ app.listen(3000, () => {
   console.log("Server ready!");
 });
 
+app.post("/orders", (req, res) => {
+  res.json(req.body);
+});
