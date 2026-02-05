@@ -18,18 +18,24 @@
     <form method="POST" action="/orders">
         <!-- TODO: pizza order form -->
         <fieldset>
-            <legend>Sauce</legend>
-            <label><input type="radio" name="sauce" value="tomato" checked> tomato</label>
-            <label><input type="radio" name="sauce" value="alfredo"> alfredo</label>
-        </fieldset>
+            <legend>Design Your Pizza!</legend>
+            <fieldset>
+                <legend>Sauce</legend>
+                <label><input type="radio" name="sauce" value="tomato" checked> Tomato</label>
+                <label><input type="radio" name="sauce" value="alfredo"> Alfredo</label>
+            </fieldset>
 
-        <fieldset>
-            <legend>Toppings</legend>
-            <label><input type="checkbox" name="toppings" value="pepperoni"> pepperoni</label>
-            <label><input type="checkbox" name="toppings" value="mushrooms"> mushrooms</label>
-            <label><input type="checkbox" name="toppings" value="onions"> onions</label>
+            <fieldset>
+                <legend>Toppings</legend>
+                <label><input type="checkbox" name="toppings" value="pepperoni"> Pepperoni</label>
+                <label><input type="checkbox" name="toppings" value="ham"> Ham</label>
+                <label><input type="checkbox" name="toppings" value="vegetariansausage"> Vegetarian Sausage</label>
+                <label><input type="checkbox" name="toppings" value="mushrooms"> Mushrooms</label>
+                <label><input type="checkbox" name="toppings" value="peppers"> Peppers</label>
+                <label><input type="checkbox" name="toppings" value="olives"> Olives</label>
+            </fieldset>
         </fieldset>
-
+        <legend>Your Info</legend>
         <label>
             Your Name:
             <input type="text" name="name">
@@ -39,6 +45,7 @@
             Your Email:
             <input type="text" name="email">
         </label>
+        </fieldset>
 
         <button>Submit</button>
     </form>

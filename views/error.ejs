@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Langara Pizza</title>
   <link rel="stylesheet" href="/style.css">
 </head>
+
 <body>
   <header>
     <h1>Langara Pizza</h1>
@@ -13,12 +15,17 @@
   </header>
 
   <h2>Errors</h2>
-
+  <p><a href="/index.html">Home</a></p>
   <dl>
     <% for (const err of errors) { %>
-      <dt><%= err.field %></dt>
-      <dd><%= err.message %></dd>
-    <% } %>
+      <dt>
+        <%= err.field %>
+      </dt>
+      <dd>
+        <%= err.message %>
+      </dd>
+      <% } %>
   </dl>
 </body>
+
 </html>
