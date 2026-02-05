@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/gznjob23-source/a4-yuki-iwami#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "validator": "^13.15.26"
   }
 }

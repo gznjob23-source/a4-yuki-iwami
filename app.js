@@ -1,4 +1,5 @@
 import express from "express";
+import { validatePizza, validateColor } from "./my-validators.js";
 
 const app = express();
 
@@ -10,6 +11,10 @@ app.listen(3000, () => {
   console.log("Server ready!");
 });
 
-app.post("/orders", (req, res) => {
-  res.json(req.body);
+app.post("/orders", validatePizza, (req, res) => {
+  if (res.locals.errors.length === 0) {
+    res.json(req.body);
+  } else {
+    res.status(422).json(res.locals.errors);
+  }
 });
